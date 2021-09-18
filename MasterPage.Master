@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebApplication7.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns =" http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ <title>DeveloperSoft Inc.</title>
+ <asp:ContentPlaceHolder ID="head" runat="server">
+ </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .nuevoEstilo1 {
+            vertical-align: top;
+            background-color: #C0C0C0;
+            width: 200px;
+            height: 300px;
+        }
+        .nuevoEstilo2 {
+            vertical-align: top;
+            background-color: #999999;
+            width: 45px;
+            height: 45px;
+            border-bottom-style: solid;
+            border-bottom-width: thick;
+            border-bottom-color: #336600;
+        }
+        .auto-style2 {
+            width: 258px;
+            height: 129px;
+        }
+        .auto-style4 {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+ <form id="form1" runat="server">
+ <div>
+ <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+     <p>
+         <table class="auto-style1">
+             <tr>
+                 <td class="nuevoEstilo2" colspan="2">
+                     <img alt="LOGOEMPRESA.JPG" class="auto-style2" longdesc="LOGO DE LA EMPRESA" src="Images/logo.png" /></td>
+             </tr>
+             <tr>
+                 <td colspan="2">&nbsp;</td>
+             </tr>
+             <tr>
+                 <td class="nuevoEstilo1">
+                     <br />
+                     <br />
+                     <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged">
+                     </asp:TreeView>
+                     <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                 </td>
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    <td class="auto-style4"><strong>Demostración de Páginas Maestras</strong></td>
+                 </asp:ContentPlaceHolder>
+             </tr>
+         </table>
+         Copyright © 2020 The Soft Inc.</p>
+ </asp:ContentPlaceHolder>
+ </div>
+ </form>
+</body>
+</html>
